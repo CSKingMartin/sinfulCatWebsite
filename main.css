@@ -6,7 +6,7 @@
   max-width: 1240px;
   margin: auto; }
   .layout h1 {
-    border-bottom: 2px solid #C5AFA4; }
+    border-bottom: 2px solid #000000; }
   .layout + * {
     padding: 20px; }
   @media (min-width: 1000px) {
@@ -21,7 +21,8 @@
     .layout.layout-frame-wrapper > * + * {
       margin-left: 4%; } }
   .layout.layout-3wide {
-    margin-top: 0em; }
+    margin-top: 0em;
+    border-bottom: 2px solid #000000; }
     @media (min-width: 1000px) {
       .layout.layout-3wide > * {
         float: left; }
