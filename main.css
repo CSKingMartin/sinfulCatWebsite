@@ -2,10 +2,8 @@
   overflow: hidden;
   width: 100%;
   padding: 20px;
-  background: grey;
   max-width: 1240px;
-  margin: auto;
-  border-radius: 1em; }
+  margin: auto; }
   @media (min-width: 1000px) {
     .layout.layout-frame-wrapper > * {
       float: left; }
@@ -42,18 +40,21 @@
         width: 49%; }
     .layout.layout-2wide > * + * {
       margin-left: 2%; } }
-  @media (min-width: 1000px) {
-    .layout.layout-1to2 > * {
-      float: left; }
-      .layout.layout-1to2 > *:nth-child(1) {
-        width: 32%; }
-      .layout.layout-1to2 > *:nth-child(2) {
-        width: 65%; }
-    .layout.layout-1to2 > * + * {
-      margin-left: 3%; } }
-  @media (max-width: 1000px) {
-    .layout.layout-1to2 > * + * {
-      margin-top: 20px; } }
+  .layout.layout-1to2 {
+    background: #AA9BB2;
+    border-radius: 1em; }
+    @media (min-width: 1000px) {
+      .layout.layout-1to2 > * {
+        float: left; }
+        .layout.layout-1to2 > *:nth-child(1) {
+          width: 32%; }
+        .layout.layout-1to2 > *:nth-child(2) {
+          width: 65%; }
+      .layout.layout-1to2 > * + * {
+        margin-left: 3%; } }
+    @media (max-width: 1000px) {
+      .layout.layout-1to2 > * + * {
+        margin-top: 20px; } }
   @media (min-width: 1000px) {
     .layout.layout-2to1 > * {
       float: left; }
@@ -146,7 +147,7 @@ h5 {
   font-size: 1.125em;
   text-align: center;
   padding: 10px;
-  background-color: blue;
+  background-color: #AA9BB2;
   border: none;
   cursor: pointer;
   color: white;
@@ -166,8 +167,7 @@ h5 {
 .card {
   width: 100%;
   min-height: 6em;
-  border: solid black 2px;
-  border-radius: 1em;
+  border: solid #AA9BB2 2px;
   overflow: hidden; }
   .card .card__title {
     font-size: 2em;
@@ -198,7 +198,7 @@ ul.navbar {
 
 body {
   color: black;
-  background: purple; }
+  background: #FFFFFF; }
 
 footer {
   position: absolute;
@@ -206,3 +206,6 @@ footer {
 
 .content > * + * {
   margin-top: 20px; }
+
+.big_letters strong {
+  color: #B53636; }
