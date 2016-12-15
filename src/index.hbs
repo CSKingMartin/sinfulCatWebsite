@@ -1,0 +1,121 @@
+{{> _header title="SinfulCat" css_name="main.css" }}
+
+<body>
+
+{{> _navbar }}
+
+<div class="layout">
+
+	<div class="layout layout-1to2">
+
+		<div id="number1">
+			<div class="big_letters" style="font-size: 3.5em">
+				Hello world! Welcome to <strong>SinfulCat</strong>
+			</div>
+			<div id="body" style="margin-top: 20px">
+				SinfulCat is the brainchild of Conner Wells, a Computer Science student at Linfield College. This framework was desgined to help students and other Web Developers get a foot in the door using useful tools to help streamline workflow. 
+			</div>
+			<div id="body2" style="margin-top: 20px">
+				Ready to start learning tools like Gulp, Handlbars, and SCSS? SinfulCat is a framework built from Gulp designed to be as informative as possible, allowing you to have confidence in your technique and allow you to work faster. This means you get to spend less time honing your HTML and CSS skills, and less time with frustrating snags in the development process.
+			</div>
+			<div id="body3" style="margin-top: 20px">
+				For more information about the project, please visit the <a href="#">about</a> page, or visit the <a href="https://www.github.com/cskingmartin/sinfulcat">Github Repository
+				</a>.
+			</div>
+			
+		</div>
+
+		<div id="number2">
+			<img src="images/sinfulCat1-lg.png" style="max-height: 520px">
+		</div>
+
+	</div>
+			
+</div>
+
+		<h1>About</h1>
+
+		<div class="layout layout-3wide">
+			{{> _button_card 
+
+				title="Gulp"
+
+				content="<p>Gulp is the streaming build system that uses Javascript in your development space to automate your workflow. Gulp is used by SinfulCat to do things like host your webpages on your browser, refresh them when changed, and precompile code for distribution.</p>"
+
+				button__title="Learn more about Gulp!"
+
+				button__link="http://gulpjs.com/"
+			}}
+
+			{{> _button_card 
+
+				title="Handlebars.js"
+
+				content="<p>Handlebars.js is a templating language library that allows you use logic with HTML. When writing Handlebars files, you can reuse HTML classes within your project, and populate the data akin to functional programming.</p>"
+
+				button__title="Learn more about Handlebars!"
+
+				button__link="http://handlebarsjs.com/"
+			}}
+
+			{{> _button_card 
+
+				title="Sass/SCSS"
+
+				content="
+				<p>Sass or SCSS are both similar options to help write cleaner, more organized CSS. Using this language library allows users to separate CSS into easily readable chunks which allows for clearer organization during development.</p>"
+
+				button__title="Learn more about Sass/SCSS!"
+
+				button__link="http://sass-lang.com/"
+			}}
+		</div>
+
+		<h2>Theory</h2>
+
+		<div class="layout layout-3wide">
+
+			{{> _card 
+
+				title="Core Skills"
+
+				content="
+				<p>SinfulCat was designed with you in mind, because it was designed for everyone! Step by step instruction combined with several included examples are here to help get you confident in your abilities as a developer.</p>"
+			}}
+
+			{{> _card 
+
+				title="No Magic Behind the Curtain"
+
+				content="
+				<p>The tools chosen for SinfulCat were carefully selected so that everything is out in the open. Learning with other high-end build-tools like Ruby on Rails have too much of the process hidden in the code. With SinfulCat, the key parts of the framework are given to you piece by piece so you know exactly what's going on all the time.</p>"
+			}}
+
+			{{> _card 
+
+				title="A Foot in the Door"
+
+				content="
+				<p>The Web Development industry has an extremely high turnover rate with development tools. If the tools are changing all the time, how is someone outside of the industry supposed to keep up? The practices employed in SinfulCat are focused on overarching skills with HTML and CSS that will help you anywhere that are independent on the tools you use.</p>"
+			}}
+
+
+		</div>
+
+		<div class="layout layout-frame-wrapper">
+			<div id="one"></div>
+
+			{{> _button button__title="Download SinfulCat now!"}}
+
+			<div id="two"></div>
+
+		</div>
+
+		
+	
+
+</div>
+
+	
+
+</body>

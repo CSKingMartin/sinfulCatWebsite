@@ -1,0 +1,28 @@
+// _card.scss
+
+
+.card {
+	width: 100%;
+	min-height: 6em;
+	border: solid black 2px;
+	border-radius: 1em;
+	overflow: hidden;
+	
+
+	.card__title {
+		font-size: 2em;
+		padding: .5em;
+		padding-bottom: 0;
+		text-align: center;
+	}
+
+	.card__picture{
+
+	}
+
+	.card__content{
+		padding: 1em;
+
+	}
+
+}

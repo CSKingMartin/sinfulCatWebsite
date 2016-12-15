@@ -1,0 +1,91 @@
+//_layout.scss
+
+.layout {
+	overflow: hidden;
+	width: 100%;
+	padding: 20px;
+	background: grey;
+	max-width: 1240px;
+	margin: auto;
+	border-radius: 1em;
+
+	// & + * {
+	// 	margin-top: 20px;
+	// }
+
+	&.layout-frame-wrapper {
+		@media (min-width: 1000px) {
+			& > * { 
+				float: left;
+				&:nth-child(1) {width: 23%;}
+				&:nth-child(2) {width: 46%;}
+				&:nth-child(3) {width: 23%;}
+			}
+			& > * + * {
+				margin-left: 4%;
+			}
+		}
+	}
+	&.layout-3wide {
+		margin-top: 0em;
+		@media (min-width: 1000px) {
+			& > * { 
+				float: left;
+				&:nth-child(1) {width: 31%;}
+				&:nth-child(2) {width: 31%;}
+				&:nth-child(3) {width: 31%;}
+			}
+			& > * + * {
+				margin-left: 3.5%;
+			}
+		}
+
+		@media (max-width: 1000px) {
+			& > * + * {
+				margin-top: 20px;
+			}
+		}
+	}
+	&.layout-2wide {
+		@media (min-width: 1000px) {
+			& > * { 
+				float: left;
+				&:nth-child(1) {width: 49%;}
+				&:nth-child(2) {width: 49%;}
+			}
+			& > * + * {
+				margin-left: 2%;
+			}
+		}
+	}
+	&.layout-1to2 {
+		@media (min-width: 1000px) {
+			& > * { 
+				float: left;
+				&:nth-child(1) {width: 32%;}
+				&:nth-child(2) {width: 65%;}
+			}
+			& > * + * {
+				margin-left: 3%;
+			}
+		}
+
+		@media (max-width: 1000px) {
+			& > * + * {
+				margin-top: 20px;
+			}
+		}
+	}
+	&.layout-2to1 {
+		@media (min-width: 1000px) {
+			& > * { 
+				float: left;
+				&:nth-child(1) {width: 65%;}
+				&:nth-child(2) {width: 32%;}
+			}
+			& > * + * {
+				margin-left: 3%;
+			}
+		}
+	}
+}

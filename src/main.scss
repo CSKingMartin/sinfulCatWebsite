@@ -1,0 +1,24 @@
+// main.scss
+
+@import
+"layout",
+"reset",
+"components/button/button",
+"components/card/card",
+"components/navbar/navbar";
+
+body {
+	color: black;
+	background: purple;
+}
+
+footer {
+	position: absolute;
+	bottom: 0;
+}
+
+.content {
+	& > * + * {
+		margin-top: 20px;
+	}
+}
