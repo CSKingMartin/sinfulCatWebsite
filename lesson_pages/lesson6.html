@@ -1,0 +1,98 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset = "utf-8">
+	<title>SinfulCat -- Lesson 6</title>
+	<link rel="stylesheet" href="../main.css"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+
+<ul class="navbar">
+	<li> <h2>SinfulCat</h2> </li>
+	<li> <a href="../index.html">Home</a> </li>
+	<li> <a href="../about.html">About</a> </li>
+	<li> <a href="../lessons.html">Lessons</a> </li>
+	<li> <a href="../downloads.html">Downloads</a> </li>
+	
+</ul>
+
+
+	<div class="content">
+		<div class="layout">
+<h1>Lesson Six; SASS</h1>
+
+<p>The final lesson in this demo will be quick, and we are introducing SASS, or SCSS. Just like we learned to use Templating Languages to separate and modularize our HTML, we are also going to do the same with CSS. Fortunately, learning SCSS is a lot easier. </p>
+
+<h3>The Gulp Task</h3>
+
+<p>Before we launch into the details of SASS, let's cover the usage of the gulp task quickly. </p>
+
+<pre>
+gulp.task('sass', function() {
+	return gulp.src('./src/main.scss')
+	.pipe(sass())
+	.pipe(gulp.dest('./dist'))
+});
+</pre>
+
+<p>This task is extremely simple. It finds the 'main.scss' file, compiles it to raw CSS via the ```.pipe(sass())``` line, and places it in the 'dist' file. Remember, that as of the last lesson our BrowserSync task launches from the 'dist' directory. </p>
+
+<p>Our 'build' task also has a little change which runs the 'sass' task instead of the 'css' task which has been removed in this iteration of the gulpfile.</p>
+
+<h3>Back to SASS</h3>
+
+<p>SCSS honestly doesn't look a whole lot different than CSS. You can write all of the same code, but your file extensions will be '.scss' instead of '.css'. In your 'main.scss' file in your 'src,' you can import other modular '.scss' files stored in other places in your directory. This means we can organize the .css for components and small parts of our codebase in places where they are easy to find instead of in a single file where it may be difficult to find. Here is what my 'main.scss' file looks like:</p>
+
+<pre>
+//main.scss
+@import
+"components/layout/layout",
+"reset",
+"components/button/button",
+"components/navbar/navbar";
+
+body {
+	color: black;
+}
+
+footer {
+	position: absolute;
+	bottom: 0;
+}
+
+</pre>
+
+<p>Other than a few small changes (to the 'body' and 'footer' tags) all of the other parts to my file are '@import' statements which follow the file path I specify. The formatting of '@import' statements can be particular, so be sure to reference the example to make sure that it's working properly. If there are any errors, the precompile task will throw errors in Terminal or Gitbash, which makes them fairly easy to find.</p>
+
+<p>There is a bit more fluidity to SCSS files which allows you to embed rule inside the rules for other classes. For example:</p>
+
+<pre>
+//sample.scss
+.content {
+	max-width: 600px;
+	background: green;
+
+	p {
+		color: white;
+	}
+}
+
+</pre>
+<p>Here I can specify that all &lt;p&gt; tags inside a &lt;div class="content"&gt; &lt;/div&gt; have white font.</p>
+
+<p>The reason why the separation is so helpful is that we can store all of the CSS for components like buttons in th same directory as their Handlebars templates. If you look in the example directory for lesson 5, you see that I have a 'components' folder. Inside I can organize all of my files and include all of the code for any given component in a single place. This means, again, in order to make changes I know exactly where the code will be stored, and making changes in any of he files here will show the changes thorughout the entire project.</p>
+
+		</div>
+
+		
+
+
+	</div>
+
+
+</body>
