@@ -1,0 +1,82 @@
+{{!-- lessons.hbs --}}
+{{> _header title="SinfulCat" css_name="main.css" }}
+
+	<div class="layout">
+
+	<h1 style="padding: 0px 20px 20px 20px;">Lessons</h1>
+
+		<div class="content">
+
+			<p>The lessons here for SinfulCat are designed to be taken one by one. In each, a different piece of the SinfulCat framework is used and demonstrated. Sometimes, these lessons will require you to alter files within your working directory to be able to use the different tools.</p>
+
+			<p>Here you can navigate between lessons. Even if you have basic HTML/CSS knowledge it's worthwhile perusing through even the first lessons.</p>
+		</div>
+
+		<div class="layout layout-3wide">
+
+			{{> _button_card title="Lesson 1: Setup" 
+
+			content="This is probably the most essential lessson, as it explains the downloads and setup portion of using SinfulCat."
+
+			button__title="Teach me!"
+
+			button__link="./lesson_pages/lesson1.html"
+			}}
+
+			{{> _button_card title="Lesson 2: Beginning Gulp" 
+
+			content="Runs through the basic, minimal usage of Gulp. Focuses on the first task: BrowserSync, which allows you to host your site on a browser and show changes in realtime."
+
+			button__title="Teach me!"
+
+			button__link="./lesson_pages/lesson2.html"
+
+			}}
+
+			{{> _button_card title="Lesson 3: Basic HTML/CSS" 
+
+			content="This lesson gives some basic overview of HTML and CSS. In the future, more lessons will be available that describe further nuances of these languages."
+
+			button__title="Teach me!"
+
+			button__link="./lesson_pages/lesson3.html"
+			}}
+
+		</div>
+
+		<div class="layout layout-3wide">
+
+			{{> _button_card title="Lesson 4: Custom Classes" 
+
+			content="Custom classes form the basis for being able to separate your code into modular segments. This lesson covers writing custom classes, and explains the way to have variation and inheritance."
+
+			button__title="Teach me!"
+
+			button__link="./lesson_pages/lesson4.html"
+			}}
+
+			{{> _button_card title="Lesson 5: Templating Languages" 
+
+			content="This lesson covers beginning Handlebars, which is the templating language used by SinfulCat. Templating allows for functional programming with HTML and beginning logic."
+
+			button__title="Teach me!"
+
+			button__link="./lesson_pages/lesson5.html"
+			}}
+
+			{{> _button_card title="Lesson 6: SASS/SCSS" 
+
+			content="SASS/SCSS is a variation language on CSS. Allows for modularization of CSS files to keep CSS for different classes separated by file."
+
+			button__title="Teach me!"
+
+			button__link="./lesson_pages/lesson6.html"
+			}}
+
+		</div>
+
+
+
+	</div>
+
+</body>

@@ -1,11 +1,21 @@
+@import url(http://fonts.googleapis.com/css?family=Ubuntu);
 .layout {
   overflow: hidden;
   width: 100%;
   padding: 20px;
-  background: grey;
   max-width: 1240px;
-  margin: auto;
-  border-radius: 1em; }
+  margin: auto; }
+  .layout h1 {
+    border-bottom: 2px solid #000000; }
+  .layout > * {
+    padding: 20px; }
+  @media (max-width: 1000px) {
+    .layout {
+      padding: 20px 20px 0px 20px; }
+      .layout:last-child {
+        padding: 20px; }
+      .layout h1 {
+        text-align: center; } }
   @media (min-width: 1000px) {
     .layout.layout-frame-wrapper > * {
       float: left; }
@@ -18,7 +28,8 @@
     .layout.layout-frame-wrapper > * + * {
       margin-left: 4%; } }
   .layout.layout-3wide {
-    margin-top: 0em; }
+    margin-top: 0em;
+    border-bottom: 2px solid #000000; }
     @media (min-width: 1000px) {
       .layout.layout-3wide > * {
         float: left; }
@@ -31,8 +42,10 @@
       .layout.layout-3wide > * + * {
         margin-left: 3.5%; } }
     @media (max-width: 1000px) {
-      .layout.layout-3wide > * + * {
-        margin-top: 20px; } }
+      .layout.layout-3wide {
+        border: none; }
+        .layout.layout-3wide > * + * {
+          margin-top: 20px; } }
   @media (min-width: 1000px) {
     .layout.layout-2wide > * {
       float: left; }
@@ -42,18 +55,21 @@
         width: 49%; }
     .layout.layout-2wide > * + * {
       margin-left: 2%; } }
-  @media (min-width: 1000px) {
-    .layout.layout-1to2 > * {
-      float: left; }
-      .layout.layout-1to2 > *:nth-child(1) {
-        width: 32%; }
-      .layout.layout-1to2 > *:nth-child(2) {
-        width: 65%; }
-    .layout.layout-1to2 > * + * {
-      margin-left: 3%; } }
-  @media (max-width: 1000px) {
-    .layout.layout-1to2 > * + * {
-      margin-top: 20px; } }
+  .layout.layout-1to2 {
+    background: #AA9BB2;
+    border-radius: 1em; }
+    @media (min-width: 1000px) {
+      .layout.layout-1to2 > * {
+        float: left; }
+        .layout.layout-1to2 > *:nth-child(1) {
+          width: 32%; }
+        .layout.layout-1to2 > *:nth-child(2) {
+          width: 65%; }
+      .layout.layout-1to2 > * + * {
+        margin-left: 3%; } }
+    @media (max-width: 1000px) {
+      .layout.layout-1to2 > * + * {
+        margin-top: 20px; } }
   @media (min-width: 1000px) {
     .layout.layout-2to1 > * {
       float: left; }
@@ -124,7 +140,17 @@ em {
   font-style: italic; }
 
 pre {
-  font-family: monospace; }
+  font-family: monospace;
+  white-space: pre-wrap;
+  /* css-3 */
+  white-space: -moz-pre-wrap;
+  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;
+  /* Opera 4-6 */
+  white-space: -o-pre-wrap;
+  /* Opera 7 */
+  word-wrap: break-word;
+  /* Internet Explorer 5.5+ */ }
 
 h1 {
   font-size: 2em; }
@@ -143,10 +169,12 @@ h5 {
 
 .button {
   min-width: 100px;
+  max-width: 550px;
+  margin: auto;
   font-size: 1.125em;
   text-align: center;
   padding: 10px;
-  background-color: blue;
+  background-color: #AA9BB2;
   border: none;
   cursor: pointer;
   color: white;
@@ -156,23 +184,21 @@ h5 {
     color: black; }
   .button a {
     text-decoration: none;
-    color: black; }
+    color: black;
+    cursor: pointer; }
   .button:focus {
     outline: 0; }
   .button:hover {
-    background-color: white;
-    color: green; }
+    background-color: #B53636; }
 
 .card {
   width: 100%;
   min-height: 6em;
-  border: solid black 2px;
-  border-radius: 1em;
-  overflow: hidden; }
+  border: solid #AA9BB2 2px;
+  overflow: hidden;
+  height: 100%; }
   .card .card__title {
     font-size: 2em;
-    padding: .5em;
-    padding-bottom: 0;
     text-align: center; }
   .card .card__content {
     padding: 1em; }
@@ -185,20 +211,31 @@ ul.navbar {
   list-style-type: none;
   font-size: 1.2em;
   border-bottom: 2px solid black; }
+  @media (max-width: 1000px) {
+    ul.navbar li {
+      font-size: .6em; } }
   ul.navbar li {
     display: inline-block;
     margin: auto;
     height: 100%;
-    margin-top: .5em; }
+    margin-top: .5em;
+    -webkit-transition: color .25s ease-in;
+    transition: color .25s ease-in; }
+    ul.navbar li:hover {
+      color: #B53636; }
     ul.navbar li a {
       padding: .5em 1em;
       text-align: center;
       text-decoration: none;
-      color: black; }
+      color: black;
+      -webkit-transition: color .25s ease-in;
+      transition: color .25s ease-in; }
+      ul.navbar li a:hover {
+        color: #B53636; }
 
 body {
   color: black;
-  background: purple; }
+  background: #FFFFFF; }
 
 footer {
   position: absolute;
@@ -206,3 +243,9 @@ footer {
 
 .content > * + * {
   margin-top: 20px; }
+
+.content a {
+  text-decoration: none; }
+
+.big_letters strong {
+  color: #B53636; }

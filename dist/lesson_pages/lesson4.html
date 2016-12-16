@@ -1,0 +1,174 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset = "utf-8">
+	<title>SinfulCat -- Lesson 4</title>
+	<link rel="stylesheet" href="../main.css"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+
+<ul class="navbar">
+	<li> <h2>SinfulCat</h2> </li>
+	<li> <a href="../index.html">Home</a> </li>
+	<li> <a href="../about.html">About</a> </li>
+	<li> <a href="../lessons.html">Lessons</a> </li>
+	<li> <a href="../downloads.html">Downloads</a> </li>
+	
+</ul>
+
+
+	<div class="content">
+
+		<div class="layout">
+
+			<h1>Lesson Four; Custom Classes</h1>
+
+			<p>HTML and CSS are great pairings on their own, but relying on the built in classes and tags is extremely limiting. On most webistes, you can find a diverse number of componenets, each having a number of variations as well. Part of what makes this framework useful is that it's tailored to something called modularization.</p>
+
+			<p>This style of thinking and writing code is an extention of UNIX idealogy -- which amounts to "write code that does one thing, and does that one thing well." This type of thinking is primarily associated with "object oriented programming," or "functional programming," which are admittedly different to HTML and CSS. So how do we apply this to HTML/CSS?</p>
+
+			<p>Modularizing code with these two languages looks like writing pieces of a puzzle which come together on the full site. If you can craft all of the code for your buttons, navbars, headers, and other reusable pieces then you can assemble your page with those prewritten parts. The work is all done beforehand, and instead of slaving away writing the same pieces over and over again, or using copy-paste a number of times for large sections you can devote minimal work to tedious tasks and more to the design side.</p>
+
+			<h3>Built in Tags</h3>
+
+			<p>The first part to writing these separate components is using custom classes. Let's start by making a button class for our site. Take a look at the example below:</p>
+
+			<pre>
+//HTML
+&lt;button&gt;
+
+	&lt;p&gt;Click Me&lt;/p&gt;
+
+&lt;/button&gt;
+			</pre>
+
+			<p>This is some HTML and represents a button that uses the built in tags. To reiterate: this is NOT a custom class. &lt;button&gt; already exists in the language. For simple solutions, this is a handy. We can easily write some CSS to help format this as well. </p>
+
+			<pre>
+//CSS
+button {
+	background: green;
+}
+button.p {
+	color: white;
+	font-size: 1.5em;
+}
+			</pre>
+
+			<p>But there are a few issues here which makes this sub-optimal to our purposes. As is, this is a screenshot of what the button above, rendered with teh following HTML and CSS examples would look like:</p>
+
+			![figure 3.1](images/fig3.1.png)
+
+			![figure 3.2](images/fig3.2.png)
+
+			<p>As you can see, the button class already comes with a bit of formatting on it's own. When clicked, it has the highlight border around it, which we may not want. In order to delete this, we have to write additional code to opt out. </p>
+
+			<p>If we want to have additional variations on buttons, our code can get a little messier:</p>
+
+			<pre>
+//HTML
+&lt;button id="type1"&gt;
+
+	&lt;p&gt;Click Me&lt;/p&gt;
+
+&lt;/button&gt;
+
+&lt;button id="type2"&gt;
+
+	&lt;p>Click Me&lt;/p&gt;
+
+&lt;/button&gt;
+
+			</pre>
+
+			<p>Inside the tag we are using the 'id' selector to specify which buttons the different rules (in this case colors) apply to. To specify this in CSS, we use the # key to make this distinction:</p>
+
+			<pre>
+//CSS
+button {
+	color: white;
+	font-size: 1.5em;
+}
+
+button:focus { //this gets rid of the focus highlight on the border
+	outline: none;
+}
+
+button#type1 {
+	background: green;
+}
+
+button#type2 {
+	background: blue;
+}
+
+			</pre>
+
+			<p>Using the original tags can create a lot of excess work for us to opt out of the original styling and add variations between the differnt types of buttons we want. Using the id selector is similar enough to using the class selector to differentiate between types that it's difficult to justify not using custom classes. At a bare minimum by using anything that has rules applied to it by default, our locus of control shrinks which leaves room for error and uncertainty when we build our site. </p>
+
+			<p>This provides high incentive to create our own classes. We can implement solutions that in the long run will shrink the total amount of code we have to write, and we know exactly what rules will be applied to the class becuase we are writing everything from scratch. </p>
+
+			<h3>Custom Classes</h3>
+
+			<p>Custom classes use the ```div``` tag, followed by the class selector like so:</p>
+
+			<pre>
+//HTML
+&lt;div class="button type1"&gt;
+
+	&lt;p&gt;Click Me&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;div class="button type2"&gt;
+	
+	&lt;p&gt;Click Me&lt;/p&gt;
+
+&lt;/div&gt;
+
+			</pre>
+
+			<p>Notice we have two class selectors inside the div tag. This is technically a larger amount of code, but the amount of control that we earn is worth is. Additionally, later in the course we can implement more parts of the framework to make the bulk of our writing work go away anyways. </p>
+
+			<pre>
+//CSS
+
+.button {
+	color: white;
+	font-size: 1em;
+	width: 150px;
+	height: 50px;
+	text-align: center;
+	padding: 10px;
+	cursor: pointer;
+
+}
+
+.button.type1 {
+	background: green;
+}
+
+.button.type2 {
+	background: blue;
+}
+
+			</pre>
+
+			<p>Notice that there is a lot more code written in the ```.button``` class. The reason why, is because there were several rules prewritten for the built in button class. Using custom classes means that we have a bit more work to write, but we only have to write it once and we know exactly how our buttons will look and how they will behave. </p>
+
+			<p>Let's look at the screenshots for these examples:</p>
+
+			![figure 3.3](images/fig3.3.png)
+
+			<p>Our two different methods look relatively the same, and they both serve the same function. </p>
+
+		</div>
+
+	</div>
+
+</body>

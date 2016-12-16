@@ -1,6 +1,105 @@
 {{!-- downloads.hbs --}}
 {{> _header title="SinfulCat -- Downloads" css_name="main.css" }}
 
-<body>
+	<div class="layout">
 
-{{> _navbar }}
+	<h1 style="padding: 0px 20px 20px 20px;">Downloading SinfulCat</h1>
+
+		<div class="content">
+			
+			<p>The simplest way to get the SinfulCat is to download it here. Included is everything you need to use the project in full, as well as start small and follow along with the lessons.</p>
+
+			{{> _button button__title="Download SinfulCat"
+
+			button__link="../downloads/sinfulCat-release.zip"}}
+
+		</div>
+
+		<h1 style="padding: 0px 20px 20px 20px;">External Downloads</h1>
+
+		<div class="content">
+
+			<p>Also mentioned in Lesson 1, SinfulCat uses a few external pieces of software to get the framework up an running. You can find links to those downloads here:</p>
+
+		</div>
+
+		<div class="layout layout-2wide">
+
+			{{> _button_card title="Node.js" 
+
+			button__title="Download"
+
+			button__link="https://nodejs.org/en/"
+			}}
+
+			{{> _button_card title="GitBash" 
+
+			button__title="Download"
+
+			button__link="https://git-scm.com/downloads"
+			}}
+		</div>
+
+		<div class="layout layout-2wide">
+
+			{{> _button_card title="Sublime Text 3" 
+
+			button__title="Download"
+
+			button__link="https://www.sublimetext.com/3"
+			}}
+
+			{{> _button_card title="Notepad++" 
+
+			button__title="Download"
+
+			button__link="https://notepad-plus-plus.org/download/v7.2.2.html"
+			}}
+
+		</div>
+
+		<h1 style="padding: 0px 20px 20px 20px;">Examples</h1>
+
+		<div class="content">
+			<p>I have created example directories with sample HTML/CSS, and fully functional gulpfiles to boot for every lesson. Simply download the example, extract the zip file and run "npm install" inside the directory through a CLI of your choice.</p>
+
+		</div>
+
+		<div class="layout layout-3wide">
+
+			{{> _button_card title="Lessons 1-4:" 
+
+			button__title="Download"
+
+			button__link="../downloads/lessons1-4_example.zip"
+			}}
+
+			{{> _button_card title="Lesson 5:" 
+
+			button__title="Download"
+			button__link="../downloads/lessons5_example.zip"
+			}}
+
+			{{> _button_card title="Lesson 6:" 
+
+			button__title="Download"
+			button__link="../downloads/lessons6_example.zip"
+			}}
+
+		</div>
+
+		<div class="content">
+			<p>I have also compressed this entire site, which uses a modified version of the SinfulCat framework for you to view as well:</p>
+
+			{{> _button_card title="Download this site!"
+
+				button__title="Download"
+				button__link="../downloads/sinfulCatWebsite-example.zip"
+
+			}}
+
+		</div>
+
+	</div>
+
+</body>

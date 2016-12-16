@@ -3,11 +3,14 @@
 .button {
 	min-width: 100px;
 
+	max-width: 550px;
+	margin: auto;
+
 	font-size: 1.125em;
 	text-align: center;
 	padding: 10px;
 
-	background-color: blue;
+	background-color: $color1;
 	border: none;
 
 	cursor: pointer;
@@ -24,6 +27,7 @@
 	a {
 		text-decoration: none;
 		color: black;
+		cursor: pointer;
 	}
 
 
@@ -32,8 +36,7 @@
 	}
 
 	&:hover {
-		background-color: white;
-		color: green;
+		background-color: $color2;
 	}
 }
 

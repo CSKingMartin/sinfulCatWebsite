@@ -1,4 +1,11 @@
 // main.scss
+$color1: #AA9BB2;
+$color2: #B53636;
+$color3: #C5AFA4;
+$black: #000000;
+$white: #FFFFFF;
+
+@import url(http://fonts.googleapis.com/css?family=Ubuntu);
 
 @import
 "layout",
@@ -9,7 +16,7 @@
 
 body {
 	color: black;
-	background: purple;
+	background: $white;
 }
 
 footer {
@@ -20,5 +27,15 @@ footer {
 .content {
 	& > * + * {
 		margin-top: 20px;
+	}
+
+	a {
+		text-decoration: none;
+	}
+}
+
+.big_letters {
+	strong {
+		color: $color2;
 	}
 }

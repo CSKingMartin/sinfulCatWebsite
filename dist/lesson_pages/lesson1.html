@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset = "utf-8">
+	<title>SinfulCat -- Lesson 1</title>
+	<link rel="stylesheet" href="../main.css"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+
+<ul class="navbar">
+	<li> <h2>SinfulCat</h2> </li>
+	<li> <a href="../index.html">Home</a> </li>
+	<li> <a href="../about.html">About</a> </li>
+	<li> <a href="../lessons.html">Lessons</a> </li>
+	<li> <a href="../downloads.html">Downloads</a> </li>
+	
+</ul>
+
+
+	<div class="content">
+
+		<div class="layout">
+
+			<h1>Lesson One; Setup</h1>
+
+			<h3>Welcome to SinfulCat</h3>
+
+				<p>Web Development can be an intimidating industry. Sometimes people get a little bit of experience by being able to develop a custom page for their MySpace, or their Neopets homepage, however those experiences are now dated, and there are fewer new experiences that are accessible today to help industry outsiders get a good grasp on what's important and what's good practice.</p>
+
+				<p>To boot, oftentimes the practices of a professional firm use frameworks or build engines that are entirely alien to someone who hasn't ever written a lick of code before. Going as far as shadowing a company can be extremely challenging and won't be honed down enough to be able to pick up the skills necessary to work on personal projects, or become a capable professional. </p>
+
+				<p>This framework is all designed to help teach skills for Front End web development, or FED. More often than not you'll hear the two sides of the industry described as the "Front End," and the "Back End." The Front End is the visible design and markup that users see, and the Back End coordinates the transfer of data and high-level functionality that the users interact with. Thankfully for most folk to build a small personal site, there isn't a large need for the back end parts. </p>
+
+				<p>There are more terms to help make sense of this Front End. This half is also referred to as client-side development, or the presentation layer. We'll be walking through and learning how to display content on a web page that pretty much behaves and looks the same for anyone who views it on the Web.</p>
+
+				<h3>Foward</h3>
+
+				<p>Before we get too far into burying ourselves in code, let's take a look at the following link:</p>
+
+				<a href="https://justinjackson.ca/words.html">Click Me</a>
+
+				<p>I think the opinions on this web page are important and well said. Jackson makes an important and distinct commentary on the purpose of Web Content being a service to users. The Content is what the user is at the page for. If the design and implementation of a website to display that content -- whether it be products or news or music -- hinders the consumer it's not useful. Jackson highlights very strongly that websites need to be accessible. If they are too cluttered, or complex, or slow, then they're not helping enhance the experience.</p>
+
+				<p>In addition to that thinking, it's important to note that sometimes the Web Development on a page is a part of the content. Images, animations, colors, brand logos, and other parts that could be considered markup may be extremely important to the identity of the content. In that case, having a website as bare as Jackson's article could be an inefficient use of the Internet as a media channel.</p>
+
+				<p>As we pursue learning about design, it's important to think that what we're learning isn't just how to code markup for web pages, we're learning how to effectively communicate ideas to an audience through the web. </p>
+
+				<h3>External Software</h3>
+
+				<p>There are a few distinct components that you will need in order to use SinfulCat in full. The framework is built through Gulp, which is a streaming build engine. To use this key part, there are a few more things that we need that will enable us to use the automation of Gulp.</p>
+
+				<p>There are three extenal bits that we need:</p>
+
+				<p>First, start by downloading Node.js. Node is a different type of Javascript runtime that allows you to run Javascript tasks on your server, or in this case in our development environment. </p>
+
+				<p>You can find a link to download Node.js <a href="https://nodejs.org/en/">here</a>. </p>
+
+				<p>Node.js comes bundled with Command Line Interface for NPM, which is a package manager for JavaScript. From here, we can download the external tools that we need in order to make SinfulCat functional.</p>
+
+				<p>Second, Node.js, Gulp, and NPM (as well as lots of other build frameworks) operate through CLIs, or Command Line Interfaces. My preferred tool to use on a Windows computer is Gitbash. On Macintosh computers, Terminal works just as well. There's no need for an additional download. </p>
+
+				<p>I recommend that you use the Gitbash option for Windows because most of the CLI instructions in this tutorial are formatted for Linux commands. Command Prompt, or PowerShell on a Windows computer use different commands. </p>
+
+				<p>You can find the download link for Gitbash <a href="https://git-scm.com/downloads">here</a>.
+
+				<p>Finally, we also will need an application that we'll write our code in. There are many different applications that you can use. Every developer tends to have their preferred workstation. I like to use Sublime Text 3, because that's what I was taught on. Sublime Text 3 is freeware and there are other freeware options like Notepad++ that work just as well, just differently.</p>
+
+				<p>You can find the link for Sublime Text 3 <a href="https://www.sublimetext.com/3">here</a>, and for Notepad++ <a href="https://notepad-plus-plus.org/download/v7.2.2.html">here</a>.</p>
+
+				<h3>Setting up SinfulCat</h3>
+
+				<p>The download for SinfulCat is available at the <a href="https://cskingmartin.github.io/downloads.html">downloads page</a> on the official site. Once you've downloaded the file, unzip it and travel to that file path in your CLI. Then run the following command:
+
+				<pre>npm install</pre>
+
+				<p>This install will take a few minutes, so be patient.</p>
+
+				<p>For any code writing you will need a text-editor. Word processors like Microsoft Word aren't useful to us, we need an additional program. I recommend using SublimeText3, it's a popular industry standard editor. Notepad++ is also an option, but I prefer SublimeText because it highlights code for you based on the language you're using making it easy to read, and allows you to add support for more languages to boot.</p>
+
+				<h3>Getting Started</h3>
+
+				<p>There are quite a few files you'll see in your directory here. </p>
+
+				<p>The 'src' folder is what we'll primarily be working in. 'src' stands for 'source,' and it's pretty common for most Web Development projects to have one. All of the folders in here contain our organized, original markup. Oftentimes there will be some pre-processing of files that can condense the data, execute some logic, or other things that the browser can't do. All of the final markup that the browser can read will usually be in a 'dist' folder, which stands for distribution. </p>
+
+				<p>The gulpfile contains all the instructions for the automation that I've written for the framework. Don't mess with this too much until we get to talking about it in the lessons. For now, the gulpfile is extremely simple. For the more advanced, and full versions of the gulpfile please look at the examples downloads available at the <a href="https://cskingmartin.github.io/downloads.html">downloads page</a> on the official site.</p>
+
+				<p>This framework is tuned and specialized to streamline your workflow. Workflow isn't neccessarily an HTML or CSS concept, but an overhead concept that most developers are concerned with. In the world of deadlines and huge websites, being able to trim the fat from some of the more tedious and heady parts of writing for Webpages is a huge plus.</p>
+
+				<p>Your installs and downloads should be close to finishing. Type 'gulp' into your CLI. You should see no error messages! If you do, check to see what the message is and see if you can solve it. Google is your best friend.</p>
+
+				<p>Each lesson from here on out will include some lecture and examples. </p>
+
+		</div>
+
+	</div>
+
+</body>
+

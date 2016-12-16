@@ -1,0 +1,124 @@
+{{!-- lesson3.hbs --}}
+
+{{> _header title="SinfulCat -- Lesson 3" css_name="../main.css"}}
+
+	<div class="content">
+
+		<div class="layout">
+			<h1>Lesson Three; HTML/CSS</h1>
+
+			<h3>HTML</h3>
+
+			<p>HTML stands for Hyper Text Markup Language, and it's the primary language for content on WebPages. The content of HTML is thankfully pretty legible, and it doesn't have much logic or semantics to learn. HTML is basically controlling where content is organized on a page -- and you do this by either embedding it or placing it outside of certain sections. Look at the following example: </p>
+
+			<pre>
+&lt;body&gt;
+	&lt;div class="myClass"&gt;&lt;/div&gt;
+
+		&lt;h1&gt;This is a title!&lt;/h1&gt;
+
+		&lt;p&gt;This is some content on a page! Notice that this sits underneath the 'h1', which serves as a title and inside the layout, which has rules applied to it which help us place this content where we want on the page.&lt;/p&gt;
+	&lt;/div&gt;
+
+&lt;/body&gt;
+
+			</pre>
+
+			<p>The parts of this example that have the angle brackets ('&lt;, &t;') are called tags. Tags are used by us to keep separate different pieces of our webpage that may need to behave differently. For example, the &lt;h1&gt; and &lt;p&gt; tags have default rules applied to them by the language. Other classes that are makred with a &lt;div&gt; have additional information that we write. In the example, we created a custom section that's identified by the class "myClass," is something that we can apply rules to later. At this point, without another document to decide these rules, there are no default rules applying to the content between these tags.</p>
+
+			<p>There's loads of documentation on all of the default tags for HTML on the web. The hardest parts are learning how to organize spacing on the page for different elements.</p>
+
+			<p>A good exercise to practice is to develop a resume for yourself using the basic tags for HTML. The semantic spacing may be not be centered or perfect, but it gives you practice using many different types of tags. Here's an example of a resume I've drafted:</p>
+
+			<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+	&lt;head&gt;
+		&lt;meta charset="utf-8"&gt;
+		&lt;title>Current Resume&lt;/title&gt;
+		&lt;link rel="stylesheet" type="text/css" href="resume.css"&gt;
+
+	&lt;/head&gt;
+
+	&lt;body&gt;
+
+		&lt;h1>Conner Wells</h1>
+		&lt;h2>Example St, Big City, WA 00000</h2>
+		&lt;h2>299-299-2929, cwells@linfield.edu</h2>
+
+		&lt;h2&gt;Education&lt;/h2&gt;
+		&lt;ul&gt;
+			&lt;li>Bachelor of Arts in Computer Science, Linfield College&lt;/li&gt;
+			&lt;li>High School Degree, Example High School&lt;/li&gt;
+
+		&lt;/ul&gt;
+
+		&lt;h2&gt;Qualification&lt;/h2&gt;
+
+		&lt;ol&gt;
+			&lt;li&gt;Likes to Code&lt;/li&gt;
+			&lt;li&gt;Likes to Work with People&lt;/li&gt;
+			&lt;li&gt;Likes to Be a Part of a Team&lt;/li&gt;
+			&lt;li&gt;Likes to have Responsibility&lt;/li&gt;
+
+		&lt;/ol&gt;
+
+	&lt;/body&gt;
+
+&lt;/html&gt;
+			</pre>
+
+			<p>Although this is not a good example of a resume, it should give you some ideas as to what kinds of classes already built into the language can be used for different purposes. </p>
+
+			<p>The example I've given is a full HTML file, which includes the &lt;head&gt; tag, &lt;header&gt; tag, and &lt;body&gt; tag. The beginning part of this document, all the way through to the &lt;body&gt; tag has to be included for every HTML document, although some of the values included here may not be the same. The &lt;!DOCTYPE html&gt; signifies that to the browser what langauge it's being given. &lt;html&gt; lets the browser know when the 'html' portion of the document starts.</p>
+
+			<p>The &lt;head&gt; section has a bit more to it than the other parts. &lt;meta charset"utf-8"&gt; is information given to the browser that helps it decode our document and display it properly. There's no reason that you should change this value. The &lt;title&gt; is pretty explanatory, this is what is displayed at the top of the browser window, or on the tab when our webpage is open. Last, the &lt;link&gt; tag points to an external document called a Cascading Style Sheet where we can change or specify some of the rules that help us designate how stuff looks on a webpage.</p>
+
+			<h3>CSS</h3>
+
+			<p>Cascading Style Sheets are even easier to understand than HTML. The difficult part in using this tool is having a handle on the vast amount of different elements and properties that can be applied to webpages.</p>
+
+			<p>Here's an example of what a section of a CSS file could look like:</p>
+
+			<pre>
+			.layout {
+			    overflow: hidden;
+			    width: 100%;
+			    max-width: 1000px;
+			    padding: 20px;
+			    border: solid black 2px; 
+			    margin: auto;
+			}
+			</pre>
+
+			<p>This describes a custom class called 'layout'. If we were to refere to this in our HTML file, we'd do it like so:</p>
+
+			<pre>
+&lt;div class="layout"&gt;
+	&lt;p&gt;Some content goes here!&lt;/p&gt;
+
+&lt;/div&gt;
+			</pre>
+
+			<p>Let's dive into what a few of these rules mean:</p>
+
+			<p>'overflow' will help dictate that any content that doesn't fit within this rectangular section of the page will be hidden. It will look like part of the picture is cut off by a frame.</p>
+
+			<p>'width' tells how wide the div will be. In this case, when it's 100%, it will span the entire space of it's parent class. But in addition to that, 'max-width' will cut this value off when it reaches 1000 pixels wide.</p>
+
+			<p>'margin', 'padding', and 'border' are best explained with diagrams. Here's a very good link to a page that describes these selectors:</p>
+
+			<a href="http://www.lesliefranke.com/files/reference/csscheatsheet.html">CSS Cheat Sheet Link</a>
+
+			<p>These selectors basically help define how far inside of the border the content is placed, as well as how far apart is this class as a whole placed in relation to the other classes on the page. </p>
+
+			<p>Practice with layout is the hardest part of Web Development by far. Professionals have issues with random selectors not being applied in different areas, with overlap, and with odd spacing every day. This is likely to be the area that you'll need the most practice with, and will spend the most time adjusting and learning. </p>
+
+
+
+		</div>
+
+	</div>
+
+
+</body>

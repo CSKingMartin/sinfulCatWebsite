@@ -4,14 +4,27 @@
 	overflow: hidden;
 	width: 100%;
 	padding: 20px;
-	background: grey;
 	max-width: 1240px;
 	margin: auto;
-	border-radius: 1em;
 
-	// & + * {
-	// 	margin-top: 20px;
-	// }
+	h1 {
+		border-bottom: 2px solid $black;
+	}
+
+	& > * {
+		padding: 20px;
+	}
+
+	@media (max-width: 1000px) {
+		padding: 20px 20px 0px 20px;
+
+		&:last-child {
+			padding: 20px;
+		}
+		h1 {
+			text-align: center;
+		}
+	}
 
 	&.layout-frame-wrapper {
 		@media (min-width: 1000px) {
@@ -28,6 +41,7 @@
 	}
 	&.layout-3wide {
 		margin-top: 0em;
+		border-bottom: 2px solid $black;
 		@media (min-width: 1000px) {
 			& > * { 
 				float: left;
@@ -41,6 +55,7 @@
 		}
 
 		@media (max-width: 1000px) {
+			border: none;
 			& > * + * {
 				margin-top: 20px;
 			}
@@ -59,6 +74,8 @@
 		}
 	}
 	&.layout-1to2 {
+		background: $color1;
+		border-radius: 1em;	
 		@media (min-width: 1000px) {
 			& > * { 
 				float: left;

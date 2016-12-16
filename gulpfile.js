@@ -32,7 +32,7 @@ gulp.task('bs',['watch'], function(){
 });
 
 gulp.task('hb', function(){
-	gulp.src('./src/*.hbs')
+	gulp.src('./src/**/*.hbs')
 	    .pipe(handlebars({contents:"whatever"}, {
 	    	helpers: gulp.src('./src/components/**/*.js'),
 	        partials: gulp.src('./src/components/**/*.hbs')
