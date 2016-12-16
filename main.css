@@ -213,7 +213,7 @@ ul.navbar {
   border-bottom: 2px solid black; }
   @media (max-width: 1000px) {
     ul.navbar li {
-      font-size: .8em; } }
+      font-size: .6em; } }
   ul.navbar li {
     display: inline-block;
     margin: auto;
