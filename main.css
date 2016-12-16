@@ -9,6 +9,13 @@
     border-bottom: 2px solid #000000; }
   .layout + * {
     padding: 20px; }
+  @media (max-width: 1000px) {
+    .layout {
+      padding: 20px 20px 0px 20px; }
+      .layout:last-child {
+        padding: 20px; }
+      .layout h1 {
+        text-align: center; } }
   @media (min-width: 1000px) {
     .layout.layout-frame-wrapper > * {
       float: left; }
@@ -35,8 +42,10 @@
       .layout.layout-3wide > * + * {
         margin-left: 3.5%; } }
     @media (max-width: 1000px) {
-      .layout.layout-3wide > * + * {
-        margin-top: 20px; } }
+      .layout.layout-3wide {
+        border: none; }
+        .layout.layout-3wide > * + * {
+          margin-top: 20px; } }
   @media (min-width: 1000px) {
     .layout.layout-2wide > * {
       float: left; }
@@ -150,6 +159,8 @@ h5 {
 
 .button {
   min-width: 100px;
+  max-width: 550px;
+  margin: auto;
   font-size: 1.125em;
   text-align: center;
   padding: 10px;
@@ -168,8 +179,7 @@ h5 {
   .button:focus {
     outline: 0; }
   .button:hover {
-    background-color: white;
-    color: green; }
+    background-color: #B53636; }
 
 .card {
   width: 100%;
@@ -196,12 +206,20 @@ ul.navbar {
     display: inline-block;
     margin: auto;
     height: 100%;
-    margin-top: .5em; }
+    margin-top: .5em;
+    -webkit-transition: color .25s ease-in;
+    transition: color .25s ease-in; }
+    ul.navbar li:hover {
+      color: #B53636; }
     ul.navbar li a {
       padding: .5em 1em;
       text-align: center;
       text-decoration: none;
-      color: black; }
+      color: black;
+      -webkit-transition: color .25s ease-in;
+      transition: color .25s ease-in; }
+      ul.navbar li a:hover {
+        color: #B53636; }
 
 body {
   color: black;
